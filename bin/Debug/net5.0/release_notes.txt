@@ -1,0 +1,72 @@
+To check the CasinoWallet.SuspendedUserFunds to proceed/fail the txn
+Addition
+EXT
+https://everymatrix.atlassian.net/browse/MON-12091
+MoneyMarix checks the CasinoWallet.SuspendedUserFunds on GM to know whether to proceed with / fail the transaction after Delay node processing.
+
+Rollback of changes done by MON-11897 task is required
+Addition
+EXT
+https://everymatrix.atlassian.net/browse/MON-12101
+We reverted to the previous version. For the Russian Federation, therer is a standard set of fields as for other countries.
+
+[Verification Service] Async workflow separation
+Addition
+EXT
+https://everymatrix.atlassian.net/browse/MON-12112
+We separated asynchronous flows from Content, Customer, and Verification microservices.
+
+Rewrite all stored procedures using FIND_IN_SET
+Addition
+INT
+https://everymatrix.atlassian.net/browse/MON-12121
+All the stored procedures have been rewritten.
+
+[WM] To show on the Transaction History page for Deposit the final amount after fee
+Addition
+EXT
+https://everymatrix.atlassian.net/browse/MON-12141
+On the Transaction History page for Deposit, the final amount is displayed with the fee applied, same as for Withdrawal.  We created a key in UCS (off by default) - which switches the feature on for a specific operator: MoneyMatrix.Cashier.ApplyMerchantFee UCS key.
+
+[Pay4Fun]- to implement Withdrawal API (СMS/WebApi)
+Addition
+EXT
+https://everymatrix.atlassian.net/browse/MON-12155
+We implemented CMS & WebApi for for Pay4Fun withdrawals.
+
+SpectroCoin - WestCasino SDK - web-api part is required
+Addition
+EXT
+https://everymatrix.atlassian.net/browse/MON-12165
+SpectroCoin payment vendor was implemented on WestCasino site (web-api).
+
+[MM] Customer service - add username field
+Addition
+EXT
+https://everymatrix.atlassian.net/browse/MON-12172
+UserName is displayed in Identity Management for all newly registered customers.
+
+UBO - Scrolling issue in the Limits block
+Fix
+EXT
+https://everymatrix.atlassian.net/browse/MON-11822
+When you go to the UBO -> System configuration and choose the "Edit" action for a Paysol, at the bottom of the page there is the "Limits" block. The user can control the scroll (stop, move) wherever it's needed.
+
+OktoPay.Cash localization changes
+Fix
+EXT
+https://everymatrix.atlassian.net/browse/MON-12167
+Localizations for the receipt page are added as localized strings, not input fields.
+
+MiFinity - Separate dialing code from the phone number
+Fix
+EXT
+https://everymatrix.atlassian.net/browse/MON-12169
+We need separated dialing code from the phone number and pass them as separate fields.  As a result, the number is passed to the iFrame.
+
+[Pay4Fun] Vendor signature check error on deposit after receiving callback from vendor
+Fix
+EXT
+https://everymatrix.atlassian.net/browse/MON-12171
+Transaction status is 'Pending Notification' with Vendor message '102 - pending'.
+
